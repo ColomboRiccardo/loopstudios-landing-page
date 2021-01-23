@@ -30,6 +30,7 @@ html {
 }
 
 body {
+	width: 100vw;
 	margin: 0;
 	min-height: 100vh;
 }
@@ -53,20 +54,36 @@ h1 {
 	font-size: 2.4em;
 }
 
-.hero {
-	position: absolute;
-	top: 240px;
-	padding: 20px 30px;
-	width: 260px;
-	border: solid 2px var(--white);
+p {
+	font-family: 'Alata', sans-serif;
 }
+
+h2 {
+	font-size: 2em;
+	margin: 10px;
+	text-align: center;
+}
+
+/** This is all the css styles inherent the section-one*/
 
 #section-one {
 	position: relative;
 	height: 600px;
 	background-image: url('./images/mobile/image-hero.jpg');
 	background-size: cover;
-	padding: 30px 20px;
+	padding: 40px 30px;
+}
+
+#logo {
+	width: 140px;
+}
+
+.hero-text {
+	position: absolute;
+	top: 240px;
+	padding: 25px;
+	width: 255px;
+	border: solid 2px var(--white);
 }
 
 header > nav {
@@ -80,6 +97,8 @@ header {
 	justify-content: space-between;
 }
 
+/** This is all the css styles inherent the section-two*/
+
 #section-two {
 	display: flex;
 	flex-direction: column;
@@ -91,31 +110,23 @@ header {
 	width: 320px;
 }
 
-h2 {
-	font-size: 2em;
-	margin: 10px;
-	text-align: center;
-}
-
 #section-two > .text {
 	width: 300px;
 	padding: 30px 0px;
 	text-align: center;
 }
 
-p {
-	font-family: 'Alata', sans-serif;
-}
+/** This is all the css styles inherent the section-three*/
 
-
-
-#section-three, #section-three > div, #section-three>div>div {
+#section-three,
+#section-three > div,
+#section-three > div > div {
 	display: flex;
 	flex-direction: column;
-	align-items: center:
+	align-items: center;
 }
 
-#section-three>div>div {
+#section-three > div > div {
 	position: relative;
 	margin: 20px 0;
 }
@@ -128,7 +139,7 @@ p {
 .grid-text {
 	color: var(--white);
 	position: absolute;
-	bottom:10px;
+	bottom: 10px;
 	left: 40px;
 }
 
@@ -154,8 +165,9 @@ footer {
 	align-items: center;
 }
 
-footer > ul > li > a, footer > p {
-	color: var(--white)
+footer > ul > li > a,
+footer > p {
+	color: var(--white);
 }
 
 footer > ul > li {
