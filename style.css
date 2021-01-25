@@ -9,14 +9,10 @@
 
 - Family: [Josefin Sans](https://fonts.google.com/specimen/Josefin+Sans)
 - Weight: 300
-*/
-
-@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
-
-/*
 font-family: 'Alata', sans-serif;
 font-family: 'Josefin Sans', sans-serif;
 */
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
 
 :root {
 	--white: hsl(0, 0%, 100%);
@@ -54,7 +50,8 @@ h1 {
 	font-size: 2.4em;
 }
 
-p {
+p,
+a {
 	font-family: 'Alata', sans-serif;
 }
 
@@ -62,6 +59,49 @@ h2 {
 	font-size: 2em;
 	margin: 10px;
 	text-align: center;
+}
+
+/** This is the sidebar styling section*/
+
+#sidebar {
+	display: none;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100vw;
+	height: 100vh;
+	z-index: 2;
+	background-color: var(--black);
+}
+
+aside > nav {
+	padding: 40px 30px;
+}
+
+.header-top {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.header-top > #logo {
+	width: 160px;
+}
+
+#sidebar-menu-list {
+	height: 700px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+.sidebar-menu {
+	margin: 20px 0px;
+	color: var(--white);
+	text-decoration: none;
+	font-size: 30px;
 }
 
 /** This is all the css styles inherent the section-one*/
@@ -88,13 +128,6 @@ h2 {
 
 header > nav {
 	display: none;
-}
-
-header {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-between;
 }
 
 /** This is all the css styles inherent the section-two*/
@@ -146,6 +179,17 @@ header {
 	width: 320px;
 }
 
+.overlay {
+	position: absolute;
+	width: 320px;
+	height: 100%;
+	background: linear-gradient(
+		90deg,
+		rgba(0, 0, 0, 0.6) 0%,
+		rgba(255, 255, 255, 0) 100%
+	);
+}
+
 .grid-text {
 	width: 120px;
 	font-size: 22px;
@@ -160,14 +204,18 @@ header {
 }
 
 .see-all {
-	width: 70px;
 	margin: auto;
 	text-align: center;
-	font-family: 'Alata', sans-serif;
 	text-transform: uppercase;
 	text-decoration: none;
 	border: solid 2px var(--black);
-	padding: 10px 30px;
+	padding: 8px 40px;
+	letter-spacing: 3px;
+	color: var(--black);
+}
+
+.see-all:visited {
+	color: var(--black);
 }
 
 footer {
@@ -175,15 +223,31 @@ footer {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	margin: 70px 0px;
+	padding: 50px 0px;
 }
 
-footer > ul > li > a,
+footer > * {
+	margin: 20px;
+}
+
+footer > a,
 footer > p {
 	color: var(--white);
+	text-decoration: none;
+	text-align: center;
+}
+
+footer > p {
+	color: var(--dark-gray);
 }
 
 footer > ul > li {
 	list-style: none;
+}
+
+#social-icons > * {
+	margin: 0px 10px;
 }
 
 footer > ul {
